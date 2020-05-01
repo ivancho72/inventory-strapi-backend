@@ -1,0 +1,20 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "database": "inventory-mobile-app",
+        "host": "strapi-cluster-bkkgc.azure.mongodb.net",
+        "srv": "true",
+        "port": "27017",
+        "username": "content-admin-1",
+        "password": "7GLYxOeEKt#q4gS7DxGji"
+      },
+      "options": {
+        "authenticationDatabase": "",
+        "ssl": true
+      }
+    }
+  }
+}
