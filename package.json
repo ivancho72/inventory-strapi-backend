@@ -7,19 +7,21 @@
     "develop": "strapi develop",
     "start": "node server.js",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "build-prod": "cross-env NODE_ENV=production yarn build"
   },
   "devDependencies": {},
   "dependencies": {
+    "cross-env": "7.0.2",
     "strapi": "3.0.0-beta.20.1",
     "strapi-admin": "3.0.0-beta.20.1",
-    "strapi-utils": "3.0.0-beta.20.1",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.20.1",
+    "strapi-connector-mongoose": "3.0.0-beta.20.1",
     "strapi-plugin-content-manager": "3.0.0-beta.20.1",
-    "strapi-plugin-users-permissions": "3.0.0-beta.20.1",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.20.1",
     "strapi-plugin-email": "3.0.0-beta.20.1",
     "strapi-plugin-upload": "3.0.0-beta.20.1",
-    "strapi-connector-mongoose": "3.0.0-beta.20.1"
+    "strapi-plugin-users-permissions": "3.0.0-beta.20.1",
+    "strapi-utils": "3.0.0-beta.20.1"
   },
   "author": {
     "name": "A Strapi developer"

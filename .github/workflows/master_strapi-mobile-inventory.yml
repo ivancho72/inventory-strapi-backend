@@ -13,23 +13,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - name: Set up Node.js version
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.15.2"
 
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm run test --if-present
+      - name: install dependencies
+        run: yarn
 
-    - name: 'Deploy to Azure Web App'
-      uses: azure/webapps-deploy@v1
-      with:
-        app-name: 'strapi-mobile-inventory'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ff7cc22812984103a6200b0e9e4113e3 }}
-        package: .
+      - name: install, build, and test
+        run: |
+          yarn install
+          yarn build-prod
+
+      - name: "Deploy to Azure Web App"
+        uses: azure/webapps-deploy@v1
+        with:
+          app-name: "strapi-mobile-inventory"
+          slot-name: "production"
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_ff7cc22812984103a6200b0e9e4113e3 }}
+          package: .
