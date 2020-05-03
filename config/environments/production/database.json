@@ -4,12 +4,12 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "inventory-mobile-app",
-        "host": "strapi-cluster-bkkgc.azure.mongodb.net",
-        "srv": "true",
-        "port": "27017",
-        "username": "content-admin-1",
-        "password": "7GLYxOeEKt#q4gS7DxGji"
+        "host": "${process.env.DATABASE_HOST || '127.0.0.1'}",
+        "port": "${process.env.DATABASE_PORT || 27017}",
+        "database": "${process.env.DATABASE_NAME || 'strapi'}",
+        "username": "${process.env.DATABASE_USERNAME || ''}",
+        "password": "${process.env.DATABASE_PASSWORD || ''}",
+        "srv": "true"
       },
       "options": {
         "authenticationDatabase": "",
