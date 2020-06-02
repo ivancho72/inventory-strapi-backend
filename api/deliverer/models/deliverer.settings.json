@@ -41,6 +41,10 @@
     },
     "CompletedDeliveries": {
       "type": "integer"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
