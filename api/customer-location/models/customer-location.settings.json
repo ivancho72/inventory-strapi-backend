@@ -16,8 +16,8 @@
       "type": "boolean"
     },
     "Customer": {
-      "model": "customer",
-      "via": "CustomerLocations"
+      "via": "CustomerLocations",
+      "model": "customer"
     }
   }
 }

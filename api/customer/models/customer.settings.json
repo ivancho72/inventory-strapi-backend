@@ -30,8 +30,12 @@
       ]
     },
     "CustomerLocations": {
-      "via": "Customer",
-      "collection": "customer-location"
+      "collection": "customer-location",
+      "via": "Customer"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }
