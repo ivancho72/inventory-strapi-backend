@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delivery_requests",
+  "info": {
+    "name": "DeliveryRequest"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "StartLocation": {
+      "type": "json"
+    },
+    "Destination": {
+      "type": "json"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "InProgress",
+        "OnHold",
+        "Cancelled",
+        "Completed"
+      ]
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "DeliveryTrackers": {
+      "via": "DeliveryRequest",
+      "collection": "delivery-tracker"
+    }
+  }
+}

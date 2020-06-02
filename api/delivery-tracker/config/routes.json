@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/delivery-trackers",
+      "handler": "delivery-tracker.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/delivery-trackers/count",
+      "handler": "delivery-tracker.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/delivery-trackers/:id",
+      "handler": "delivery-tracker.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/delivery-trackers",
+      "handler": "delivery-tracker.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/delivery-trackers/:id",
+      "handler": "delivery-tracker.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/delivery-trackers/:id",
+      "handler": "delivery-tracker.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

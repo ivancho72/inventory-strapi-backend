@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_locations",
+  "info": {
+    "name": "CustomerLocation"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Location": {
+      "type": "json"
+    },
+    "IsDefault": {
+      "type": "boolean"
+    },
+    "Customer": {
+      "model": "customer",
+      "via": "CustomerLocations"
+    }
+  }
+}

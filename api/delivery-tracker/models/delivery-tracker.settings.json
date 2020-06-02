@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delivery_trackers",
+  "info": {
+    "name": "DeliveryTracker"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Location": {
+      "type": "json"
+    },
+    "DateTime": {
+      "type": "datetime"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Requested",
+        "InProgress",
+        "OnHold",
+        "Cancelled",
+        "Completed"
+      ]
+    },
+    "EstimatedDeliveryTime": {
+      "type": "datetime"
+    },
+    "DeliveryRequest": {
+      "model": "delivery-request",
+      "via": "DeliveryTrackers"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "DefaultTargetLocation": {
+      "type": "json"
+    },
+    "RequestsDelivered": {
+      "type": "integer"
+    },
+    "Rating": {
+      "type": "enumeration",
+      "enum": [
+        "Excellent",
+        "Good",
+        "Average",
+        "Poor",
+        "Bad"
+      ]
+    },
+    "CustomerLocations": {
+      "via": "Customer",
+      "collection": "customer-location"
+    }
+  }
+}

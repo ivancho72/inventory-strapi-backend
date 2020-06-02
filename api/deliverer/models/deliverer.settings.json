@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliverers",
+  "info": {
+    "name": "Deliverer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Available",
+        "Delivering",
+        "Offline",
+        "Locked",
+        "Unknown"
+      ]
+    },
+    "LatestLocation": {
+      "type": "json"
+    },
+    "Rating": {
+      "type": "enumeration",
+      "enum": [
+        "Excellent",
+        "Good",
+        "Average",
+        "Deficient",
+        "Bad"
+      ]
+    },
+    "CompletedDeliveries": {
+      "type": "integer"
+    }
+  }
+}
